@@ -1,0 +1,11 @@
+commit 18a634f1766db865937732071ef7f1ce285fe5e8
+Author: Victor Jerez <vjerezm@miumg.edu.gt>
+Date:   Mon Mar 6 14:21:33 2023 -0600
+
+    Se agrega bitacora
+
+commit 48e9881e5e1c7715d8f7d2b6efb749392e56d46c
+Author: VictorJJerezm <98106604+VictorJJerezm@users.noreply.github.com>
+Date:   Mon Mar 6 12:04:15 2023 -0600
+
+    Initial commit
