@@ -16,12 +16,12 @@ import java.util.List;
  */
 public class daoEmpleados {
 
-    private static final String SQL_SELECT = "SELECT codigo_empleado, nombre_empleado, codigo_puesto, codigo_departamento, estatus_empleado FROM sin.empleado";
-    private static final String SQL_INSERT = "INSERT INTO sin.empleado(nombre_empleado, codigo_puesto, codigo_departamento, estatus_empleado) VALUES(?, ?, ?, ?, ?)";
-    private static final String SQL_UPDATE = "UPDATE sin.empleado SET nombre_empleado=?, codigo_puesto=?, codigo_departamento=?, estatus_empleado=? WHERE codigo_empleado = ?";
-    private static final String SQL_DELETE = "DELETE FROM sin.empleado WHERE codigo_empleado=?";
-    private static final String SQL_SELECT_NOMBRE = "SELECT codigo_empleado, nombre_empleado, codigo_puesto, codigo_departamento, estatus_empleado FROM sin.empleado WHERE nombre_empleado = ?";
-    private static final String SQL_SELECT_ID = "SELECT codigo_empleado, nombre_empleado, codigo_puesto, codigo_departamento, estatus_empleado FROM sin.empleado WHERE codigo_empleado = ?";    
+    private static final String SQL_SELECT = "SELECT codigo_empleado, nombre_empleado, codigo_puesto, codigo_departamento, estatus_empleado FROM sin.empleado2";
+    private static final String SQL_INSERT = "INSERT INTO sin.empleado2(nombre_empleado, codigo_puesto, codigo_departamento, estatus_empleado) VALUES(?, ?, ?, ?, ?)";
+    private static final String SQL_UPDATE = "UPDATE sin.empleado2 SET nombre_empleado=?, codigo_puesto=?, codigo_departamento=?, estatus_empleado=? WHERE codigo_empleado = ?";
+    private static final String SQL_DELETE = "DELETE FROM sin.empleado2 WHERE codigo_empleado=?";
+    private static final String SQL_SELECT_NOMBRE = "SELECT codigo_empleado, nombre_empleado, codigo_puesto, codigo_departamento, estatus_empleado FROM sin.empleado2 WHERE nombre_empleado = ?";
+    private static final String SQL_SELECT_ID = "SELECT codigo_empleado, nombre_empleado, codigo_puesto, codigo_departamento, estatus_empleado FROM sin.empleado2 WHERE codigo_empleado = ?";    
 
     public List<clsEmpleado> consultaEmpleados() {
         Connection conn = null;
@@ -147,7 +147,6 @@ public class daoEmpleados {
                 String nombre = rs.getString("nombre_empleado");
                 String codigop = rs.getString("codigo_puesto");
                 String codigod = rs.getString("codigo_departamento");
-                int sueldo = rs.getInt("sueldo_empleado");
                 String estatus = rs.getString("estatus_empleado");
 
                 
@@ -155,7 +154,6 @@ public class daoEmpleados {
                 empleados.setNombreEmpleado(nombre);
                 empleados.setCodigoPuesto(codigop);
                 empleados.setCodigoDepartamento(codigod);
-                empleados.setSueldoEmpleado(sueldo);
                 empleados.setEstatusEmpleado(estatus);
                 System.out.println(" registro consultado: " + empleados);                
             }
@@ -187,7 +185,6 @@ public class daoEmpleados {
                 String nombre = rs.getString("nombre_empleado");
                 String codigop = rs.getString("codigo_puesto");
                 String codigod = rs.getString("codigo_departamento");
-                int sueldo = rs.getInt("sueldo_empleado");
                 String estatus = rs.getString("estatus_empleado");
 
                
@@ -195,7 +192,6 @@ public class daoEmpleados {
                 empleados.setNombreEmpleado(nombre);
                 empleados.setCodigoPuesto(codigop);
                 empleados.setCodigoDepartamento(codigod);
-                empleados.setSueldoEmpleado(sueldo);
                 empleados.setEstatusEmpleado(estatus);
                 System.out.println(" registro consultado: " + empleados);                
             }

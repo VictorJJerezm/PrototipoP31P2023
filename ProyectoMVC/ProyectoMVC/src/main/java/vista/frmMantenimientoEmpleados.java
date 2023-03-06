@@ -32,15 +32,15 @@ public class frmMantenimientoEmpleados extends javax.swing.JInternalFrame {
     public void llenadoDeTablas() {
         DefaultTableModel modelo = new DefaultTableModel();
         modelo.addColumn("Codigo");
-        modelo.addColumn("nombre");
-        modelo.addColumn("Codigo Puesto");
-        modelo.addColumn("Codigo Departamento");
-        modelo.addColumn("estatus");
+        modelo.addColumn("Nombre");
+        modelo.addColumn("Puesto");
+        modelo.addColumn("Departamento");
+        modelo.addColumn("Estatus");
         clsEmpleado empleados = new clsEmpleado();
         //VendedorDAO vendedorDAO = new VendedorDAO();
         List<clsEmpleado> listaEmpleados = empleados.getListadoEmpleados();
         tablaEmpleados.setModel(modelo);
-        String[] dato = new String[3];
+        String[] dato = new String[5];
         for (int i = 0; i < listaEmpleados.size(); i++) {
             dato[0] = Integer.toString(listaEmpleados.get(i).getCodigoEmpleado());
             dato[1] = listaEmpleados.get(i).getNombreEmpleado();
@@ -151,11 +151,11 @@ public class frmMantenimientoEmpleados extends javax.swing.JInternalFrame {
 
             },
             new String [] {
-                "ID", "Nombre", "Estatus"
+                "Codigo", "Nombre", "Puesto", "Departamento", "Estatus"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false
+                false, false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -195,14 +195,14 @@ public class frmMantenimientoEmpleados extends javax.swing.JInternalFrame {
         label6.setText("Puesto");
 
         txtCodigop.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        txtCodigop.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        txtCodigop.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtCodigop.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(204, 204, 204)));
 
         label7.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
         label7.setText("Depto");
 
         txtCodigoD.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        txtCodigoD.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        txtCodigoD.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtCodigoD.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(204, 204, 204)));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

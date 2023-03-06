@@ -15,7 +15,6 @@ public class clsEmpleado {
     private String NombreEmpleado;
     private String CodigoPuesto;
     private String codigoDepartamento;
-    private int SueldoEmpleado;
     private String EstatusEmpleado;
 
     public int getCodigoEmpleado() {
@@ -50,14 +49,6 @@ public class clsEmpleado {
         this.codigoDepartamento = codigoDepartamento;
     }
 
-    public int getSueldoEmpleado() {
-        return SueldoEmpleado;
-    }
-
-    public void setSueldoEmpleado(int SueldoEmpleado) {
-        this.SueldoEmpleado = SueldoEmpleado;
-    }
-
     public String getEstatusEmpleado() {
         return EstatusEmpleado;
     }
@@ -70,18 +61,16 @@ public class clsEmpleado {
         this.EstatusEmpleado = EstatusEmpleado;
     }
 
-    public clsEmpleado(String codigoDepartamento, int SueldoEmpleado, String EstatusEmpleado) {
+    public clsEmpleado(String codigoDepartamento, String EstatusEmpleado) {
         this.codigoDepartamento = codigoDepartamento;
-        this.SueldoEmpleado = SueldoEmpleado;
         this.EstatusEmpleado = EstatusEmpleado;
     }
 
-    public clsEmpleado(int CodigoEmpleado, String NombreEmpleado, String CodigoPuesto, String codigoDepartamento, int SueldoEmpleado, String EstatusEmpleado) {
+    public clsEmpleado(int CodigoEmpleado, String NombreEmpleado, String CodigoPuesto, String codigoDepartamento, String EstatusEmpleado) {
         this.CodigoEmpleado = CodigoEmpleado;
         this.NombreEmpleado = NombreEmpleado;
         this.CodigoPuesto = CodigoPuesto;
         this.codigoDepartamento = codigoDepartamento;
-        this.SueldoEmpleado = SueldoEmpleado;
         this.EstatusEmpleado = EstatusEmpleado;
     }
 
